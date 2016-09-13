@@ -1,0 +1,99 @@
+body {
+    background-color: #1c699d;
+}
+
+#login-wrapper {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+}
+
+h1.header-text {
+    text-align: center;
+    color: white;
+    font-size: 5vw;
+}
+
+img#header-image {
+    /*display: block;*/
+    margin: auto auto auto 20%;
+    width: 60%;
+    height: 40%;
+}
+
+#user-email, #user-password {
+    width: 70%;
+    margin: 5px auto auto;
+}
+
+#control-buttons {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 10px;
+}
+
+#control-buttons .btn-login {
+    width: 44%;
+}
+
+#control-buttons .btn-register {
+    width: 45%;
+    margin-left: 10%;
+}
+
+.modal-header-text {
+    text-align: center;
+}
+
+#user-email, #user-password {
+    color: white;
+    background-color: #1c699d;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid white;
+    border-radius: 0;
+}
+
+#user-email:focus, #user-password:focus {
+    outline: none;
+    background-color: #1c699d;
+    border: none;
+    border-bottom: 2px solid white;
+    border-radius: 0;
+}
+
+.correct-input {
+    border-bottom: 2px solid #27E32A !important;
+}
+
+.incorrect-input {
+    border-bottom: 2px solid red !important;
+}
+
+#register-form input, #register-form .confirm-register {
+    display: block;
+    width: 90%;
+}
+
+#register-form input, #register-form {
+    margin: 5px auto auto;
+}
+
+.confirm-register {
+    margin: 50px auto auto;
+}
+
+#new-user-email, #new-user-password, #new-user-password-confirm {
+    outline: none;
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid grey;
+}
+
+#new-user-email:focus, #new-user-password:focus, #new-user-password-confirm:focus {
+    outline: none;
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid black;
+}
+

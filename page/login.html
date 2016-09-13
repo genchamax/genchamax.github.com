@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html data-ng-app="loginApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="../components/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body data-ng-controller="LoginController">
+<div class="container">
+    <div id="login-wrapper">
+        <h1 class="header-text">MoomingTube</h1>
+        <img src="../images/Moomintrolls.png" id="header-image">
+
+        <form action="" method="post" class="form-group" name="loginForm" id="login-form" novalidate>
+            <div>
+                <input type="email" id="user-email" name="userEmail" data-ng-model="userEmail" placeholder="Email"
+                       class="form-control center-block"
+                       ng-class="{'correct-input': loginForm.userEmail.$valid && loginForm.userEmail.$dirty,
+                'incorrect-input': loginForm.userEmail.$invalid && loginForm.userEmail.$dirty}"/>
+            </div>
+            <div>
+                <input type="password" id="user-password" name="userPassword" data-ng-model="userPassword"
+                       placeholder="Password" class="form-control"/>
+            </div>
+            <div id="control-buttons">
+                <a href="#" class="btn-login btn btn-primary">Log in</a>
+                <a href="#" class="btn-register btn btn-primary" data-toggle="modal"
+                   data-target="#registerModal">Register</a>
+            </div>
+
+        </form>
+    </div>
+</div>
+<!--Modal-->
+<div id="registerModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!--Modal content-->
+        <div class="modal-content">
+            <!--Modal header-->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-header-text">Enter your login and password</h4>
+            </div>
+            <!--/Modal header-->
+            <!--Modal body-->
+            <div class="modal-body">
+                <form action="" method="post" name="registerForm" class="form-group" id="register-form" novalidate>
+                    <div>
+                        <input type="email" id="new-user-email" name="newUserEmail" data-ng-model="newUserEmail"
+                               placeholder="Email" class="form-control"
+                               ng-class="{'correct-input': registerForm.newUserEmail.$valid && registerForm.newUserEmail.$dirty,
+                'incorrect-input': registerForm.newUserEmail.$invalid && registerForm.newUserEmail.$dirty}"/>
+                    </div>
+                    <div>
+                        <input type="password" id="new-user-password" name="newUserPassword"
+                               data-ng-model="newUserPassword" placeholder="Password"
+                               class="form-control"/>
+                        <input type="password" id="new-user-password-confirm" name="newUserPasswordConfirm"
+                               data-ng-model="newUserPasswordConfirm"
+                               class="form-control" ng-class="{
+                                'incorrect-input': newUserPassword !== newUserPasswordConfirm && registerForm.newUserPasswordConfirm.$dirty,
+                                'correct-input': newUserPassword === newUserPasswordConfirm && registerForm.newUserPasswordConfirm.$dirty
+                               }"
+                               placeholder="Confirm password">
+                    </div>
+                    <a href="#" class="confirm-register btn btn-success">Confirm</a>
+
+                </form>
+            </div>
+            <!--/Modal body-->
+        </div>
+    </div>
+</div>
+<!--SCRIPTS-->
+<script src="../components/angular/angular.min.js"></script>
+<script src="../js/login.js"></script>
+<script src="../components/jquery/jquery-2.2.1.js"></script>
+<script src="../components/bootstrap/bootstrap.min.js"></script>
+</body>
+</html>
